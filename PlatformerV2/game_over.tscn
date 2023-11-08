@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://coaf3nqn3vpww"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_35inq"]
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_35inq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 136.0
+offset_right = 376.0
+offset_bottom = 162.0
+scale = Vector2(5.68093, 6.04312)
+text = "Game Over :("
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 352.0
+offset_right = 328.0
+offset_bottom = 416.0
+scale = Vector2(2.22693, 2.77458)
+text = "Continue?"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 352.0
+offset_right = 682.0
+offset_bottom = 404.0
+scale = Vector2(4.32991, 3.35785)
+text = "Quit :("
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
